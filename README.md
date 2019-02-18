@@ -90,7 +90,7 @@ Selecione a opção `Finish` e espere o Android Studio criar o projeto.
 
 Como dito anteriormente, as `Activities` são as classes do Android responsáveis pelas telas das aplicações. Podemos entender um como cada `Activity` sendo uma tela diferente, e uma aplicação possuindo diversas telas. Elas geralmente são compostas de dois itens principais: a `class` e o `layout`. Quando criamos o projeto, pedimos para o Android criar uma `EmptyActivity`, portanto, ele criou uma tela com o conteúdo mínimo necessário para que sua exibição seja necessária, e imediatamente exibiu o conteúdo da `class MainActivity`. Abra o arquivo `activity_main.xml`, na barra superior.
 
-![Editor Gráfico de Layout](imagens\AndroidStudio5.png)
+![Editor Gráfico de Layout](README_imgs/AndroidStudio5.png)
 
 Quando abrimos um arquivo de `layout`, o Android Studio nos mostra um editor gráfico para construção das telas. Podemos arrastar e soltar elementos para construir nossa aplicação.
 
