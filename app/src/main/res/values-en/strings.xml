@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PagSeguro_Android_Introducao</string>
+    <string name="o_texto_digitado_aparecer_aqui">Typed text will be shown here</string>
+    <string name="digite_algum_texto">Type some text</string>
+    <string name="enviar">Send</string>
+</resources>

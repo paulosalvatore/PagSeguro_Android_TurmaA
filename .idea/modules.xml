@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PagSeguro_Android_Introducao.iml" filepath="$PROJECT_DIR$/PagSeguro_Android_Introducao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PagSeguro_Android_TurmaA.iml" filepath="$PROJECT_DIR$/PagSeguro_Android_TurmaA.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

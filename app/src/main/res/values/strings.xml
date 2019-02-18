@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">PagSeguro_Android_Introducao</string>
+    <string name="app_name" translatable="false">PagSeguro_Android_Introducao</string>
+    <string name="o_texto_digitado_aparecer_aqui">O texto digitado aparecerá aqui</string>
+    <string name="digite_algum_texto">Digite algum texto</string>
+    <string name="enviar">Enviar</string>
 </resources>
