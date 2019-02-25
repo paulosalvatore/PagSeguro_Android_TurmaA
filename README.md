@@ -11,7 +11,6 @@
 - Estrutura básica da plataforma Android
 - Layouts
   - LinearLayout
-  - RelativeLayout
   - ConstraintLayout
 
 # Sumário
@@ -41,6 +40,10 @@ A partir da versão 1.5, foram escolhidos nomes de doces em ordem alfabética. A
 Antes de começarmos a desenvolver, é extremamente recomendado conhecer a documentação do Android, uma das documentações de softwares mais completas, lotada de exemplos e boas práticas de desenvolvimento.
 
 Link: https://developer.android.com/
+
+Além disso, há também o Codelabs, uma plataforma do Google com diversos tutoriais guiados para que você crie projetos de alto nível e aprenda novas ferramentas e tecnologias. Vale ressaltar que o Codelabs não possui apenas projetos de Android, o que é muito interessante para aprender diferentes assuntos.
+
+Link: https://codelabs.developers.google.com/
 
 ## Ambiente de desenvolvimento
 
@@ -267,3 +270,86 @@ protected void onCreate(Bundle savedInstanceState) {
 Rode o programa e teste o resultado! Basta clicar no elemento `tvPrincipal` e ele tem o seu conteúdo alterado.
 
 Ótimo! Agora que sabemos como criar telas, elementos e manipular elementos através de eventos estamos prontos para criar nossa primeira aplicação.
+
+### Exercício 1
+
+Criar dois elementos adicionais: EditText e Button
+Quando o usuário clicar no botão, pegar o que foi digitado e colocar no TextView (que já estava adicionado anteriormente).
+
+**Exercício extra:**
+Quando o usuário clicar no botão, verificar se algo foi digitado. Se nada tiver sido digitado, alterar o texto do TextView para "Digite alguma coisa".
+
+#### Resolução
+
+Layout:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvPrincipal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Hello World!"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etPrincipal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="Type some text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrincipal" />
+
+    <Button
+        android:id="@+id/btEnviar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Enviar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPrincipal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+Código:
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_main);
+
+  final TextView tvPrincipal = findViewById(R.id.tvPrincipal);
+  final EditText etPrincipal = findViewById(R.id.etPrincipal);
+  final Button btEnviar = findViewById(R.id.btEnviar);
+
+  btEnviar.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+      tvPrincipal.setText(etPrincipal.getText().toString());
+    }
+  });
+}
+```
+
