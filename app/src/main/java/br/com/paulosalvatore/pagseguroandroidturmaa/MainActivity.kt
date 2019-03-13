@@ -29,27 +29,9 @@ class MainActivity : AppCompatActivity() {
         val items = listOf(kotlin, kotlin)
 
         val adapter = ProgrammingLanguageAdapter(items) {
-//            Toast.makeText(this, it.title, Toast.LENGTH_LONG).show()
             longToast(it.title)
         }
 
         recyclerView.adapter = adapter
-
-        alert("Message", "Title") {
-            yesButton {
-                toast("Yes Button")
-            }
-            noButton {
-                toast("No Button")
-            }
-        }.show()
-
-        doAsync {
-            val imagem = "CarregarImagem"
-            uiThread {
-                print(imagem)
-            }
-        }
     }
 }
-class Posicao(val latitude: Double)
