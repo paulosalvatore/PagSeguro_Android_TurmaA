@@ -1,14 +1,16 @@
-package br.com.paulosalvatore.pagseguroandroidturmaa
+package br.com.paulosalvatore.pagseguroandroidturmaa.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import br.com.paulosalvatore.pagseguroandroidturmaa.R
+import br.com.paulosalvatore.pagseguroandroidturmaa.domain.ProgrammingLanguage
 import kotlinx.android.synthetic.main.programming_language_item.view.*
 
 class ProgrammingLanguageAdapter(
-    private val items: List<ProgrammingLanguage>,
-    private val listener: (ProgrammingLanguage) -> Unit
+        private val items: List<ProgrammingLanguage>,
+        private val listener: (ProgrammingLanguage) -> Unit
 ) : RecyclerView.Adapter<ProgrammingLanguageAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

@@ -1,14 +1,13 @@
-package br.com.paulosalvatore.pagseguroandroidturmaa
+package br.com.paulosalvatore.pagseguroandroidturmaa.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import br.com.paulosalvatore.pagseguroandroidturmaa.R
+import br.com.paulosalvatore.pagseguroandroidturmaa.adapter.ProgrammingLanguageAdapter
+import br.com.paulosalvatore.pagseguroandroidturmaa.domain.ProgrammingLanguage
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.*
+import org.jetbrains.anko.longToast
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,10 +19,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
 
         val kotlin = ProgrammingLanguage(
-            R.drawable.ic_developer_board,
-            "Kotlin",
-            2010,
-            "Kotlin description"
+                R.drawable.ic_developer_board,
+                "Kotlin",
+                2010,
+                "Kotlin description"
         )
 
         val items = listOf(kotlin, kotlin)
