@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:tools="http://schemas.android.com/tools"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+        <ImageView
+                android:id="@+id/ivMain"
+                android:layout_width="96dp"
+                android:layout_height="110dp"
+                android:contentDescription="Programming Language Image"
+                android:src="@drawable/ic_developer_board"
+                tools:ignore="HardcodedText"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Title"/>
+
+            <TextView
+                    android:id="@+id/tvOwner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    tools:text="Owner"/>
+
+            <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:textSize="14sp"
+                    tools:text="Description"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
