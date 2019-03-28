@@ -1,10 +1,7 @@
 package br.com.paulosalvatore.pagseguroandroidturmaa.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import br.com.paulosalvatore.pagseguroandroidturmaa.entities.Word
 
 @Dao
@@ -18,4 +15,10 @@ interface WordDao {
 
     @Query("SELECT * FROM word_table ORDER BY word ASC")
     fun getAllWords(): LiveData<List<Word>>
+
+    @Update
+    fun update(word: Word): Int
+
+    @Delete
+    fun delete(word: Word)
 }

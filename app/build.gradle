@@ -45,4 +45,8 @@ dependencies {
 
     // ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    // Anko Common
+    implementation "org.jetbrains.anko:anko-common:0.10.8"
+    implementation "org.jetbrains.anko:anko-design:0.10.8"
 }
